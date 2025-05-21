@@ -1,0 +1,180 @@
+/* Variables pour les deux thèmes */
+:root {
+  --bg-color: #f5f5f5;
+  --primary-color: #333;
+  --secondary-color: #666;
+  --accent-color: #4070f4;
+  --card-bg: #fff;
+  --border-color: #e3e3e3;
+  --sidebar-bg: #fff;
+  --timeline-bg: #fff;
+  --modal-bg: #fff;
+  --service-card-bg: #fff;
+  --blog-card-bg: #fff;
+  --navbar-bg: rgba(255, 255, 255, 0.9);
+}
+
+[data-theme="dark"] {
+  --bg-color: #1a1a1a;
+  --primary-color: #fff;
+  --secondary-color: #ccc;
+  --accent-color: #4070f4;
+  --card-bg: #2d2d2d;
+  --border-color: #444;
+  --sidebar-bg: #2d2d2d;
+  --timeline-bg: #2d2d2d;
+  --modal-bg: #2d2d2d;
+  --service-card-bg: #2d2d2d;
+  --blog-card-bg: #2d2d2d;
+  --navbar-bg: rgba(45, 45, 45, 0.9);
+}
+
+/* Styles généraux */
+body {
+  background-color: var(--bg-color);
+  color: var(--primary-color);
+  transition: all 0.3s ease;
+}
+
+/* Sidebar */
+.sidebar {
+  background-color: var(--sidebar-bg);
+  border-right: 1px solid var(--border-color);
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--navbar-bg);
+  backdrop-filter: blur(10px);
+}
+
+.navbar-link {
+  color: var(--primary-color);
+}
+
+/* Cartes et sections */
+.content-card,
+.timeline-item,
+.service-item,
+.modal-container,
+.blog-post-item {
+  background-color: var(--card-bg);
+  border-color: var(--border-color);
+  transition: all 0.3s ease;
+}
+
+/* Services */
+.service-item {
+  background-color: var(--service-card-bg);
+  border: 1px solid var(--border-color);
+}
+
+/* Timeline */
+.timeline-text {
+  color: var(--secondary-color);
+}
+
+.timeline-item::before {
+  background-color: var(--border-color);
+}
+
+/* Blog */
+.blog-post-item {
+  background-color: var(--blog-card-bg);
+}
+
+.blog-category {
+  color: var(--accent-color);
+}
+
+/* Contact form */
+.form-input {
+  background-color: var(--card-bg);
+  color: var(--primary-color);
+  border: 1px solid var(--border-color);
+}
+
+.form-input::placeholder {
+  color: var(--secondary-color);
+}
+
+/* Bouton thème */
+.theme-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.theme-btn:hover {
+  background-color: var(--border-color);
+}
+
+/* Modal */
+.modal-container {
+  background-color: var(--modal-bg);
+}
+
+.testimonials-text {
+  color: var(--secondary-color);
+}
+
+/* Skills */
+.skill-progress-bg {
+  background-color: var(--border-color);
+}
+
+.skill-progress-fill {
+  background-color: var(--accent-color);
+}
+
+/* Portfolio */
+.project-category {
+  color: var(--secondary-color);
+}
+
+.filter-list button {
+  color: var(--primary-color);
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+}
+
+.filter-list button.active {
+  background-color: var(--accent-color);
+  color: #fff;
+}
+
+/* Hover effects */
+.service-item:hover,
+.blog-post-item:hover,
+.project-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Ajustements pour le mode sombre */
+[data-theme="dark"] .sidebar,
+[data-theme="dark"] .article-title,
+[data-theme="dark"] .timeline-text,
+[data-theme="dark"] .contact-title {
+  color: var(--primary-color);
+}
+
+[data-theme="dark"] .timeline-item::before {
+  background-color: var(--border-color);
+}
+
+[data-theme="dark"] .skill-progress-bg {
+  background-color: var(--border-color);
+}
+
+[data-theme="dark"] .form-input {
+  background-color: var(--card-bg);
+  color: var(--primary-color);
+  border-color: var(--border-color);
+} 
